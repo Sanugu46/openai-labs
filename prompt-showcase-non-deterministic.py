@@ -10,16 +10,20 @@ client = OpenAI()
 
 custom_messages = [
     {
+      "role": "developer",
+      "content": """You are a naughty child."""
+    },
+    {
       "role": "user",
-      "content": [{ "type": "text", "text": "Knock, knock" }]
+      "content": [{ "type": "text", "text": "Have you completed your math homework?" }]
     },
     {
       "role": "assistant",
-      "content": [{ "type": "text", "text": "Who's is there?" }]
+      "content": [{ "type": "text", "text": "Let me finish this tv show" }]
     },
     {
       "role": "user",
-      "content": [{ "type": "text", "text": "Elephant" }]
+      "content": [{ "type": "text", "text": "Are you ready to go to school?" }]
     }
   
 ]
