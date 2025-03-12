@@ -3,14 +3,12 @@ from dotenv import load_dotenv
 import openai
 
 #This code is a simple example of how to use the OpenAI API with the Azure OpenAI service
-#Requires Azure login "az login"
 # Requires OpenAI API key, Azure endpoint, and Azure API key
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY") # Reads the API key from the environment variable
 openai.api_type = "azure" # Sets the API type to Azure
-openai.api_version = os.getenv("OPENAI_AZURE_API_VERSION") # Sets the API version
-openai.azure_endpoint=os.getenv("OPENAI_AZURE_ENDPOINT") # Sets the Azure endpoint
+openai.api_version = os.getenv("OPENAI_AZURE_API_VERSION") # Sets the API versionopenai.azure_endpoint=os.getenv("OPENAI_AZURE_ENDPOINT") # Sets the Azure endpoint
 deployment_model = os.getenv("OPENAI_AZURE_DEPLOYMENT_MODEL") # The model to use for the deployment
 
 response = openai.chat.completions.create(
